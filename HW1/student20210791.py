@@ -43,7 +43,7 @@ list_b = []
 for i in range(a0+1,b0+1):
   list_b.append(desc[i])
 
-cut_a = (len(list_a)//2)-1
+cut_a = (len(list_a)-1)//2
 cut_b = (len(list_a)-1) + len(list_b)//2
 cut_c = b0 + (len(desc)-b0-1)//2
 
