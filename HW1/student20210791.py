@@ -21,7 +21,7 @@ b0 = int(stu_cnt*0.7)-1
 
 if desc[a0] == desc[a0+1]:
   j = a0
-  for i in range(a0+1):
+  for i in range(a0):
     if desc[j] == desc[j-1]:
       j -= 1
       continue
@@ -63,7 +63,7 @@ if desc[cut_b] == desc[cut_b+1]:
       continue
     else:
       cut_b = j
-if desc[cut_c] == desc[cut_c]:
+if desc[cut_c] == desc[cut_c+1]:
   j = cut_c
   for i in range(cut_c-b0+1):
     if desc[j] == desc[j-1]:
