@@ -47,6 +47,31 @@ cut_a = (len(list_a)//2)-1
 cut_b = (len(list_a)-1) + len(list_b)//2
 cut_c = b0 + (len(desc)-b0-1)//2
 
+if desc[cut_a] == desc[cut_a+1]:
+  j = cut_a
+  for i in range(cut_a+1):
+    if desc[j] == desc[j-1]:
+      j -= 1
+      continue
+    else:
+      cut_a = j
+if desc[cut_b] == desc[cut_b+1]:
+  j = cut_b
+  for i in range(cut_b-a0+1):
+    if desc[j] == desc[j-1]:
+      j -= 1
+      continue
+    else:
+      cut_b = j
+if desc[cut_c] == desc[cut_c]:
+  j = cut_c
+  for i in range(cut_c-b0+1):
+    if desc[j] == desc[j-1]:
+      j -= 1
+      continue
+    else:
+      cut_c = j
+      
 for r in range(2,r_max):
   tmp = ws.cell(row=r, column=7).value
   if tmp >= desc[cut_a]:
