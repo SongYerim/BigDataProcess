@@ -6,6 +6,9 @@ ws = wb['Sheet1']
 
 r_max = ws.max_row
 
+for r in range(2,r_max+1):
+  ws['G'+str(r)].value = (ws['C'+str(r)].value*0.3) + (ws['D'+str(r)].value*0.35) + (ws['E'+str(r)].value*0.34) + (ws['F'+str(r)].value)
+
 total=[]
 for r in range(2,r_max+1):
   total.append(ws.cell(row=r,column=7).value)
