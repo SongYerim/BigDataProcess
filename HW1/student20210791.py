@@ -59,7 +59,7 @@ for r in range(2,r_max):
     ws.cell(row=r,column=8,value='B0')
   elif tmp >= desc[cut_c]:
     ws.cell(row=r,column=8,value='C+')
-  elif tmp >= 40:
+  else:
     ws.cell(row=r,column=8,value='C0')
   if tmp < 40:
     ws.cell(row=r,column=8,value='F')
