@@ -4,8 +4,10 @@ from openpyxl import load_workbook
 wb = load_workbook(filename='student.xlsx')
 ws = wb['Sheet1']
 
+r_max = ws.max_row
+
 total=[]
-for r in range(2,76):
+for r in range(2,r_max+1):
   total.append(ws.cell(row=r,column=7).value)
 total.sort(reverse=True)
 
