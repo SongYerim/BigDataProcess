@@ -20,17 +20,17 @@ a0 = int(stu_cnt*0.3)-1
 b0 = int(stu_cnt*0.7)-1
 
 if desc[a0] == desc[a0+1]:
-  j = a0
+  j = a0-1
   for i in range(a0):
-    if desc[j] == desc[j-1]:
+    if desc[j] == desc[j+1]:
       j -= 1
       continue
     else:
       a0 = j
 if desc[b0] == desc[b0+1]:
-  j = b0
+  j = b0-1
   for i in range(b0-a0):
-    if desc[j] == desc[j-1]:
+    if desc[j] == desc[j+1]:
       j -= 1
       continue
     else:
@@ -48,25 +48,25 @@ cut_b = (len(list_a)-1) + len(list_b)//2
 cut_c = b0 + (len(desc)-b0-1)//2
 
 if desc[cut_a] == desc[cut_a+1]:
-  j = cut_a
-  for i in range(cut_a+1):
-    if desc[j] == desc[j-1]:
+  j = cut_a-1
+  for i in range(cut_a):
+    if desc[j] == desc[j+1]:
       j -= 1
       continue
     else:
       cut_a = j
 if desc[cut_b] == desc[cut_b+1]:
-  j = cut_b
-  for i in range(cut_b-a0+1):
-    if desc[j] == desc[j-1]:
+  j = cut_b-1
+  for i in range(cut_b-a0):
+    if desc[j] == desc[j+1]:
       j -= 1
       continue
     else:
       cut_b = j
 if desc[cut_c] == desc[cut_c+1]:
-  j = cut_c
-  for i in range(cut_c-b0+1):
-    if desc[j] == desc[j-1]:
+  j = cut_c-1
+  for i in range(cut_c-b0):
+    if desc[j] == desc[j+1]:
       j -= 1
       continue
     else:
