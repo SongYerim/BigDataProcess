@@ -72,7 +72,7 @@ if desc[cut_c] == desc[cut_c+1]:
     else:
       cut_c = j
       
-for r in range(2,r_max):
+for r in range(2,r_max+1):
   tmp = ws.cell(row=r, column=7).value
   if tmp >= desc[cut_a]:
     ws.cell(row=r,column=8,value='A+')
