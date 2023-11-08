@@ -30,7 +30,7 @@ for line in f:
       thriller += 1
     elif i == "Horror":
       horror += 1
-    elif i == "Sci=Fi":
+    elif i == "Sci-Fi":
       sci += 1
     elif i == "Documentary":
       doc += 1
