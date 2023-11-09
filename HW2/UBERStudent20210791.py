@@ -27,7 +27,7 @@ for line in f:
   vehicles.append(text[2])
   trips.append(text[3])
 z1 = zip(regins,eday,vehicles,trips)
-z = sorted(z1, key=lambda x : (x[1], x[2]))
+z = sorted(z1, key=lambda x : (x[0], x[1]))
 f=open("uberoutput.txt", "wt")
 for i,j,k,l in z:
   f.write("%s,%s %s,%s\n" %(i,j,k,l))
