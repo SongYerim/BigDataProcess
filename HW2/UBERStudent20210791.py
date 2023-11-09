@@ -28,7 +28,7 @@ for line in f:
   trips.append(text[3])
 z = sorted(zip(regins,eday,vehicles,trips))
 
-f=open("uber.dat uberoupput.txt", "wt")
+f=open("uber_exp.txt uberoupput.txt", "wt")
 for i,j,k,l in z:
   f.write("%s,%s %s,%s\n" %(i,j,k,l))
 f.close()
