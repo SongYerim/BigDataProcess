@@ -21,5 +21,5 @@ z = zip(name, count)
 closef=sys.argv[2] 
 with open(closef, "wt") as f:
   for key,value in z:
-    f.write(key+" "+str(value)"\n")
+    f.write("%s %d\n" %(key,value))
     
