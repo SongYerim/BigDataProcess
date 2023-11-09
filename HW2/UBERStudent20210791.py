@@ -12,7 +12,7 @@ with open(openf, "rt") as f:
     date = text[1]
     datetime_date = datetime.strptime(date, '%m/%d/%Y')
     week = wday[datetime_date.weekday()]  
-    regins=text[0]+','+week+" "+text[2]
+    regins=text[0]+','+week+' '+text[2]
     trips=text[3]
     if regins not in uber_d:
       uber_d[regins]=trips
