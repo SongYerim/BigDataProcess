@@ -39,7 +39,8 @@ for line in f:
 g1 = ["Animation", "Children's", "Comedy", "Adventure", "Fantasy", "Romance", "Drama", "Action", "Crime", "Thriller", "Horror", "Sci-Fi", "Documentary"]
 g2 = [animation, children, comedy, adventure, fantasy, romance, drama, action, crime, thriller, horror, sci, doc]
 countgenre = zip(g1,g2)
-f = open(sys.argv[2], "wt")
+closef=sys.argv[2] 
+f = open(closef, "wt")
 for line1,line2 in countgenre:
   f.write("%s %d\n" %(line1,line2))
 f.close()
