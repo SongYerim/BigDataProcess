@@ -2,7 +2,7 @@
 
 import sys
 from datetime import datetime
-wday["MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"]
+wday=["MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"]
 uber_d = dict()
 openf=sys.argv[1]
 with open(openf, "rt") as f:
