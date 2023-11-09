@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 import sys
-from datetime from datetime
+from datetime import datetime
 wday["MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"]
 uber_d = dict()
 openf=sys.argv[1]
