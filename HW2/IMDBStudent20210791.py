@@ -1,6 +1,8 @@
 #!/usr/bin/python3
+import sys
 
-f = open("movies_exp.txt", "rt")
+openf = sys.argv[1]
+f = open(openf, "rt")
 animation=0;children=0;comedy=0;adventure=0;fantasy=0;romance=0;drama=0;action=0;crime=0;thriller=0;horror=0;sci=0;doc=0
 for line in f:
   line = line.strip()
@@ -37,7 +39,7 @@ for line in f:
 g1 = ["Animation", "Children's", "Comedy", "Adventure", "Fantasy", "Romance", "Drama", "Action", "Crime", "Thriller", "Horror", "Sci-Fi", "Documentary"]
 g2 = [animation, children, comedy, adventure, fantasy, romance, drama, action, crime, thriller, horror, sci, doc]
 countgenre = zip(g1,g2)
-f = open("movieoutput.txt", "wt")
+f = open(sys.argv[2], "wt")
 for line1,line2 in countgenre:
   f.write("%s %d\n" %(line1,line2))
 f.close()
