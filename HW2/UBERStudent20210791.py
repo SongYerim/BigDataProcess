@@ -28,8 +28,8 @@ for line in f:
   regins.append(text[0])
   vehicles.append(text[2])
   trips.append(text[3])
-z1 = zip(regins,eday,vehicles,trips)
-z = sorted(z1, key=lambda x : (x[0], x[1]))
+z = sorted(zip(regins,eday,vehicles,trips))
+#z = sorted(z1, key=lambda x : (x[0], x[1]))
 closef=sys.argv[2]
 f=open(closef, "wt")
 for i,j,k,l in z:
