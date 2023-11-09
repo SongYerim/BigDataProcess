@@ -10,12 +10,12 @@ with open(openf, "rt") as f:
     genre = text[2]
     genre = genre.split("|")
     for i in genre:
-      if i in genre_d:
+      if i not in genre_d:
         genre_d[i] = 1
       else:
         genre_d[i] += 1
 name = genre_d.keys()
-count - genre_d.values()
+count = genre_d.values()
 z = zip(name, count)
 
 closef=sys.argv[2] 
