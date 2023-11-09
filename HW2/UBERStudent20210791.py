@@ -1,8 +1,10 @@
 #!/usr/bin/python3
 
+import sys
 wday["MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"]
 regins=[];eday=[];vehicles=[];trips=[]
-f = open("uber_exp.txt", "rt")
+openf=sys.argv[1]
+f = open(openf, "rt")
 for line in f:
   line = line.strip()
   text = line.split(",")
@@ -28,7 +30,8 @@ for line in f:
   trips.append(text[3])
 z1 = zip(regins,eday,vehicles,trips)
 z = sorted(z1, key=lambda x : (x[0], x[1]))
-f=open("uberoutput.txt", "wt")
+closef=sys.argv[2]
+f=open(closef, "wt")
 for i,j,k,l in z:
   f.write("%s,%s %s,%s\n" %(i,j,k,l))
 f.close()
