@@ -25,5 +25,5 @@ with open(openf, "rt") as f:
       
 closef=sys.argv[2]
 with open(closef, "wt") as f:
-  for key,value in uber_d.itmes():
+  for key,value in uber_d.items():
     f.write("%s %s,%s\n" %(key,value[0],value[1]))
