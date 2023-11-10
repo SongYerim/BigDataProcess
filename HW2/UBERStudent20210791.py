@@ -12,12 +12,18 @@ with open(openf, "rt") as f:
     date = text[1]
     datetime_date = datetime.strptime(date, '%m/%d/%Y')
     week = wday[datetime_date.weekday()]  
-    regins=text[0]+','+week+' '+text[2]
+    regins=text[0]+','+week
+    vehicles=text[2]
     trips=text[3]
     if regins not in uber_d:
-      uber_d[regins]=trips
+      uber_d[regins] = [int(vehicles),int(trips)]
+    else:
+      for i in uber_d:
+        if i == regins:
+          uber_b[regins][0] += int(vehicles)
+          uber_[regins][1] += int(trips)
       
 closef=sys.argv[2]
 with open(closef, "wt") as f:
   for key,value in uber_d.itmes():
-    f.write("%s,%s\n" %(key,value))
+    f.write("%s %s,%s\n" %(key,value[0],value[1]))
