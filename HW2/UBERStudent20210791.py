@@ -20,8 +20,8 @@ with open(openf, "rt") as f:
     else:
       for i in uber_d:
         if i == regins:
-          uber_b[regins][0] += int(vehicles)
-          uber_[regins][1] += int(trips)
+          uber_d[regins][0] += int(vehicles)
+          uber_d[regins][1] += int(trips)
       
 closef=sys.argv[2]
 with open(closef, "wt") as f:
